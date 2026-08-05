@@ -31,3 +31,4 @@ def add_tasks():
     else:
             print("Error")
 
+            add_tasks()
