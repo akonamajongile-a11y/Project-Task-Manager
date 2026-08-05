@@ -6,6 +6,6 @@ def view_task():
 
         print("Task ID:       " + "Task Name:      " + "Category:      " + "Description:     " + "Priority:     " + "Due Date:      " + "Status:      ")
         for everything in reader:
-            print(everything[0]   + everything[1]   + everything[2]   + everything[3]   + everything[4]   + everything[5] )
+            print(everything[0]   + everything[1]   + everything[2]   + everything[3]   + everything[4]   + everything[5] + everything[6])
 
 view_task()
