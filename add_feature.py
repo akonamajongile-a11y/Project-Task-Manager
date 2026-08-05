@@ -11,7 +11,21 @@ def add_tasks():
     task_name = input("Please input your tasks name:").capitalize()
     task_category = input("Please select the category (Work/Personal)").capitalize()
     task_description = input("Please enter the description of the task: ").capitalize()
-    task_priority = input("Please select the priority level (Low/MediumHigh): ").capitalize()
+    valid = False
+    while not valid:
+        task_priority = input("Please select the priority level (Low/Medium/High): ").capitalize()
+
+        if task_priority == "Low": 
+                    valid = True
+                    print("You have selected: Low" )
+        elif task_priority == "Medium":
+                valid = True
+                print("You have selected: Medium")
+        elif task_priority == "High":
+                valid =True
+                print("You have selected: High")
+        else:
+            print("Please insert correct priority option!")
     task_due_date = input("The due date of the task is (DD/MM/YYY): ")
     task_status = input("Please select a status level (Not Started/ Started/ Done): ").capitalize()
     import csv 
@@ -20,15 +34,5 @@ def add_tasks():
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category,task_status]])
 
-    print("CSV successfully created!")
 
-    if task_priority == "Low": 
-            print("You have selected: Low" )
-    elif task_priority == "Medium":
-            print("You have selected: Medium")
-    elif task_priority == "High":
-             print("You have selected: High")
-    else:
-            print("Error")
 
-            add_tasks()
