@@ -10,10 +10,11 @@ def add_tasks():
 
     task_ID = count + 1
     task_name = input("Please input your tasks name:").capitalize()
+    task_category = input("Please select the category (Work/Personal)")
     task_description = input("Please enter the description of the task: ").capitalize()
-    task_due_date = input("The due date of the task is (DD/MM/YYY): ")
     task_priority = input("Please select the priority level (Low/MediumHigh): ").capitalize()
-    task_category = input("Please select the category (Personal/business)")
+    task_due_date = input("The due date of the task is (DD/MM/YYY): ")
+    task_status = input("Please select a status level (Not Started/ Started/ Done): ").capitalize()
     import csv 
 
     with open("tasks.csv", "a", newline="") as file: 
@@ -24,7 +25,7 @@ def add_tasks():
 
 
 
-add_tasks()
+
 
 
 
