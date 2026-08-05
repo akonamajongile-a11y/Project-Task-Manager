@@ -5,5 +5,9 @@ def search_engine():
                     reader =csv.reader(file)
 
                     for e in reader:
-                        print("Search by: ")
+                        if e[1] == " sewing":
+                            print(e)
+                            break
+                        else:
+                            print("Checking...")
 search_engine()
