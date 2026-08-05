@@ -20,14 +20,10 @@ def add_tasks():
 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)
-            writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category]])
+            writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category,task_status]])
 
     print("CSV successfully created")
 
+     
 
-
-
-
-
-
-
+            
