@@ -22,8 +22,7 @@ def add_tasks():
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category,task_status]])
 
-    print("CSV successfully created")
+    print("Entry successfuly made")
 
-     
 
-            
+add_tasks()
