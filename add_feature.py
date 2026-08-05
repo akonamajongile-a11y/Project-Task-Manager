@@ -1,12 +1,13 @@
 
 def add_tasks():
+    
     import csv 
-    count = -1 
-    with open("task.csv", "r", newline="") as file: 
+    count = 0
+    with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
 
                 for e in reader: 
-                       count =  count + 1 
+                       count = count + 1 
 
     task_ID = count + 1
     task_name = input("Please input your tasks name:").capitalize()
@@ -22,6 +23,7 @@ def add_tasks():
             writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category]])
 
     print("CSV successfully created")
+
 
 
 
