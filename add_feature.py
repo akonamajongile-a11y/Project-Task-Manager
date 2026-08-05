@@ -1,5 +1,4 @@
 def add_tasks():
-    
     import csv 
     count = 0
     with open("tasks.csv", "r", newline="") as file: 
@@ -10,7 +9,7 @@ def add_tasks():
 
     task_ID = count + 1
     task_name = input("Please input your tasks name:").capitalize()
-    task_category = input("Please select the category (Work/Personal)")
+    task_category = input("Please select the category (Work/Personal)").capitalize()
     task_description = input("Please enter the description of the task: ").capitalize()
     task_priority = input("Please select the priority level (Low/MediumHigh): ").capitalize()
     task_due_date = input("The due date of the task is (DD/MM/YYY): ")
@@ -21,7 +20,14 @@ def add_tasks():
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category,task_status]])
 
-    print("CSV successfully created")
+    print("CSV successfully created!")
 
-
+    if task_priority == "Low": 
+            print("You have selected: Low" )
+    elif task_priority == "Medium":
+            print("You have selected: Medium")
+    elif task_priority == "High":
+             print("You have selected: High")
+    else:
+            print("Error")
 
