@@ -1,10 +1,11 @@
 #List to store tasks
-List = []
+Tasks = []
 
-title = input("Please input your tasks name:")
-description = input("Please enter the description of the task: ")
-due_date = input("The due date of the task is: ")
-
+#Create the variable 
+Task_name = input("Please input your tasks name:")
+Taks_description = input("Please enter the description of the task: ")
+Task_due_date = input("The due date of the task is: ")
+Task_Status = 
+Tasks_Category = 
 
          
-
