@@ -1,2 +1,9 @@
-#This is a search engine
-print("Search user by Id or Task Name")
+def search_engine():
+    #print("Search by ")
+    import csv
+    with open("task.csv", "r", newline="") as file: 
+                    reader =csv.reader(file)
+
+                    for e in reader:
+                        print("Search by:")
+search_engine()
