@@ -1,12 +1,2 @@
-# Project-Task-Manager
-We are creating a Task Manager 
-Suggestion would be to make use of the following structure: 
-    task_ID 
-    task_name 
-    task_description 
-    task_due_date 
-    task_priority 
-    task_category 
-
- We are developing a system called Task Manager, which is designed to help users manage tasks effectively and efficiently by organizing and prioritizing their responsibilities.
+We are developing a system called Task Manager, which is designed to help users manage tasks effectively and efficiently by organizing and prioritizing their responsibilities.
 As part of the development process, we implemented features for creating, viewing, updating,searching and deleting tasks. To support these features, we used functions to create CSV files and to read from and write data to them. We also applied various Python concepts, including loops, conditional statements, Boolean values, operators, user input handling, and date management using Python's date module. Additionally, we followed good version control practices by testing our branches thoroughly before merging them into the main branch.
