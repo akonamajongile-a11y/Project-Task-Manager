@@ -70,8 +70,8 @@ def add_tasks():
                 print("CSV Sucessfully created")
         else:
                 print("Please insert correct status option!")
+
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
-add_tasks()
