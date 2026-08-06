@@ -15,6 +15,9 @@ def search_engine():
     elif search_by == "B":
           search_value = input("Search by task ID:")
           column = 0
+    elif search_by == "C":
+          search_value = input("Search task by its due date: ")
+          column = 3
 
     with open("tasks.csv", "r", newline="") as file: 
                     reader =csv.reader(file)
@@ -26,3 +29,6 @@ def search_engine():
                         else:
                             print("Checking...")
 search_engine()
+
+
+
