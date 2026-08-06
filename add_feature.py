@@ -17,6 +17,12 @@ def add_tasks():
     valid_category = False
     while not valid_category:           
         category = input("Please select the category (Work/Personal):").capitalize().strip()
+        if category == "Work":
+               print("You have made a selection: Work ")
+        elif category == "Personal":
+               print("You have a made seletion: Personal")
+        else: 
+               print("You have made an incorrect selection")
         if category == "":
                valid_category = False
                print("This is a required field.") 
@@ -75,3 +81,4 @@ def add_tasks():
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
+add_tasks()
