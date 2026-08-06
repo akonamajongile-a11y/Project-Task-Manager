@@ -6,24 +6,24 @@ def update():
     with open("tasks.csv", "r", newline="") as file:
         reader = csv.reader(file)
 
-        for e in reader:
-            if e[0] == task_ID:  
-                print("Task found:",e)
+        for line in reader:
+            if line[0] == task_ID:  
 
-            task_name = input("Enter the new task name: ")
+                task_name = input("Enter the new task name: ")
 
-            e[1] = task_name
-            found = True
-            e.append(e)
+                line[1] = task_name
+               
+                with open("tasksnew.csv", "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow(line)
+                print("Task updated successfully.")
+            else:
 
-        if found:
-
-         with open("tasks.csv", "w", newline="") as file:
-          writer = csv.writer(file)
-          writer(e)
-         print("Task updated successfully.")
-        else:
-           print("Task ID not found.")
+                with open("tasksnew.csv", "a", newline="") as file:
+                    writer = csv.writer(file)
+                    writer.writerow(line)
+          
+    
 
 
 update()
