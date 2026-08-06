@@ -1,10 +1,9 @@
 def add_tasks():
     import csv 
     count = -1 
-    with open("task.csv", "r", newline="") as file: 
+    with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
-<<<<<<< HEAD
                        count = count + 1 
     task_ID = count + 1
     valid_name = False
@@ -78,31 +77,7 @@ def add_tasks():
         else:
                 print("Please insert correct status option!")
 
-=======
-                       count =  count + 1 
-
-    task_ID = count + 1
-    task_name = input("Please input your tasks name:").capitalize()
-    task_description = input("Please enter the description of the task: ").capitalize()
-    task_due_date = input("The due date of the task is (DD/MM/YYY): ")
-    task_priority = input("Please select the priority level (Low/MediumHigh): ").capitalize()
-    task_category = input("Please select the category (Personal/business)")
->>>>>>> 5e39284666a11b9b53a776afa893aeb5ed94c631
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
-<<<<<<< HEAD
             writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
-=======
-            writer =csv.writer(file)
-            writer.writerows([[task_ID, task_name, task_description, task_due_date, task_priority, task_category]])
-
-    print("CSV successfully created")
-
-
-
-
-
-
-
->>>>>>> 5e39284666a11b9b53a776afa893aeb5ed94c631
