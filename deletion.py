@@ -1,7 +1,4 @@
-# option = input("please select the option you want remove")
 
-# if option == 0:
-#     task_id = input(please enter task id)
 def task_deletion():
  #task_id = input("Enter task ID to delete: ")
     import csv
@@ -15,24 +12,15 @@ def task_deletion():
         for row in reader:
 
             if row[0] != task_id: 
-                updated_tasks.append(row)
+                with open("tasks5.csv", "a", newline="") as file:
+                                    writer = csv.writer(file)
+                                    writer.writerow(row)
       
             else: 
-                with open("tasks5.csv", "w", newline="") as file:
-                    writer = csv.writer(file)
-                    writer.writerow(updated_tasks)
                     break
       
-    
 
 task_deletion()
 
     
 
-
-    # all = []
-    # for e in writer:
-    #     if e[0] == '1': 
-    #         print("e")
-
-          
