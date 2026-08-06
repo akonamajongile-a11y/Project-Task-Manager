@@ -4,35 +4,34 @@
 #     task_id = input(please enter task id)
 
 import csv
-with open("tasks.csv", "r", newline="") as file:
-    data = csv.reader(file)
 
-    all = []
-    for everyline in data:
-        all.append(everyline)
-    for index,ev in enumerate(all):
-       # [phiwe,cpt]
-        if ev[0] == "phiwe7":
-            all.pop(index)
-            print("found her")
-            break
-        else:
-            print("not found")
-            with open("tasks2.csv", "a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow(ev)
-            print(all)
+def task_deletion():
+    with open("tasks.csv" , "r", newline="") as file:
+        reader = csv.reader(file)
+   
+        task_id = input("Enter task ID to delete: ")
+        reader = csv.reader(file)
+        for row in reader:
+
+            if row[0] != task_id: 
+                with open("tasks5.csv", "a", newline="") as file:
+                                    writer = csv.writer(file)
+                                    writer.writerow(row)
+      
+            else: 
+               with open("tasks5.csv", "a", newline="") as file:
+                    writer = csv.writer(file)
+                    
+    os.rename("tasks.csv", "tasksold.csv")           
+    os.rename("tasks5.csv", "tasks.csv")         
+    os.remove("tasksold.csv")  
 
 
 
-
+task_deletion()
 
     
 
-
-    # all = []
-    # for e in writer:
-    #     if e[0] == '1': 
-    #         print("e")
+   
 
           
