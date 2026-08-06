@@ -7,8 +7,10 @@ def search_engine():
     print("B: Search by task ID")
     print("C: Search by task due date")
     print("D: Search by category")
-    #print("E: Search by status")
-    search_by = input("How would you like to search? ")
+    
+    search_by = input("How would you like to search? ").upper()
+    search_value = ""
+    column = 0
 
     if search_by == "A":
         search_value = input("Search by task name: ")
@@ -23,7 +25,8 @@ def search_engine():
           search_value = input("Search task by category: ")
           column = 5
     else:
-          print("You have entered invalid option")
+        print("You have entered invalid option")
+
 
     found = False
     with open("tasks.csv", "r", newline="") as file: 
