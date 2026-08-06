@@ -25,9 +25,6 @@ task_deletion()
     
 
 
-    # all = []
-    # for e in writer:
-    #     if e[0] == '1': 
-    #         print("e")
+   
 
           
