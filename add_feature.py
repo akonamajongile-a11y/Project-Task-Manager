@@ -6,11 +6,16 @@ def add_tasks():
 
                 for e in reader: 
                        count = count + 1 
-
     task_ID = count + 1
     task_name = input("Please input your tasks name:").capitalize()
     category = input("Please select the category (Work/Personal)").capitalize()
-    description = input("Please enter the description of the task: ").capitalize()
+
+    valid = False
+    while not False:
+        description = input("Please enter the description of the task: ").capitalize()
+        if description == "": 
+           print("This field can not be left empty")
+
     valid = False
     while not valid:
         priority = input("Please select the priority level (Low/Medium/High): ").capitalize()
@@ -30,11 +35,25 @@ def add_tasks():
     import datetime 
     due_date = datetime.datetime.now()
     print(due_date.year)
-    print(due_date.strftime("%A"))
-
-    status = input("Please select a status level (Not Started/ Started/ Done): ").capitalize()
+    print(due_date.strftime("%A"))    
+    valid = False
+    while not valid:
+        status = input("Please select a status level (Not started/ Started/ Done): ").capitalize()
+        if status == "Not Started": 
+                valid = True
+                print("You have selected: Not started " )
+        elif status == "Started":
+                valid = True
+                print("You have selected: Started ")
+        elif status == "Done":
+                valid = True
+                print("You have selected: Done ")
+        else:
+                print("Please insert correct priority option!")
     import csv 
 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
+
+add_tasks()     
