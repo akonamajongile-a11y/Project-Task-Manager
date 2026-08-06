@@ -38,7 +38,3 @@ def view_task():
 
          #{Style.RESET_ALL}"
 
-    
-       
-       
-view_task()

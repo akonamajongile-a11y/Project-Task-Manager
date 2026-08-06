@@ -1,11 +1,2 @@
-# Project-Task-Manager
-We are creating a Task Manager 
-
-# Features & their order 
-1. Task ID
-2. Task Name
-3. Category: Work/Personal
-4. Description
-5. Priority: High/Medium/Low
-6. Due Date
-7. Status: Not Started/Started/Done
+We are developing a system called Task Manager, which is designed to help users manage tasks effectively and efficiently by organizing and prioritizing their responsibilities.
+As part of the development process, we implemented features for creating, viewing, updating,searching and deleting tasks. To support these features, we used functions to create CSV files and to read from and write data to them. We also applied various Python concepts, including loops, conditional statements, Boolean values, operators, user input handling, and date management using Python's date module. Additionally, we followed good version control practices by testing our branches thoroughly before merging them into the main branch.
