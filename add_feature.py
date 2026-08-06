@@ -56,4 +56,3 @@ def add_tasks():
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
 
-add_tasks()     
