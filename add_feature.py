@@ -53,6 +53,14 @@ def add_tasks():
     
     from datetime import datetime 
     due_date = input("The due date of the task is (DD/MM/YYY): ")  
+    try: 
+           if len(due_date) != 10:
+                  raise ValueError("Incorrect format length")
+           date_obj = datetime.strptime(due_date, "%d/%m/%Y")
+           print("Valid date: ", date_obj)
+    except ValueError as e: 
+           print("Error: ", e)
+           
     valid_status = False
     while not valid_status:
         status = input("Please select a status level (Not started/ Started/ Done): ").capitalize()
@@ -73,7 +81,7 @@ def add_tasks():
     import csv 
 
     with open("tasks.csv", "a", newline="") as file: 
-            writer =csv.writer(file)
+            writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
 
 add_tasks()
