@@ -9,13 +9,13 @@ def add_tasks():
     task_ID = count + 1
     task_name = input("Please input your tasks name:").capitalize()
     category = input("Please select the category (Work/Personal)").capitalize()
-
     valid = False
-    while not False:
+    while not valid: 
         description = input("Please enter the description of the task: ").capitalize()
-        if description == "": 
-           print("This field can not be left empty")
-
+        if description == "" :
+               valid = False
+               print("Enter something")
+               
     valid = False
     while not valid:
         priority = input("Please select the priority level (Low/Medium/High): ").capitalize()
