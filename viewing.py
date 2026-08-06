@@ -33,7 +33,3 @@ def view_task():
     if everything[4] == "High":
         f"{Fore.RED}{everything[4]:<10}{Style.RESET_ALL}"
 
-    
-       
-       
-view_task()
