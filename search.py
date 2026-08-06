@@ -12,6 +12,9 @@ def search_engine():
     if search_by == "A":
         search_value = input("Search by task name: ")
         column = 1
+    elif search_by == "B":
+          search_value = input("Search by task ID:")
+          column = 0
 
     with open("tasks.csv", "r", newline="") as file: 
                     reader =csv.reader(file)
