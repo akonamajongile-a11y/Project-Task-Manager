@@ -8,14 +8,14 @@ def update():
 
         for line in reader:
             if line[0] == task_ID:  
-                option = input("""
-                        1. Task Name
-                        2. Category: Work/Personal
-                        3. Description
-                        4. Priority: High/Medium/Low
-                        5. Due Date
-                        6. Status: Not Started/Started/Done
-                        """)
+                option = input(""" 
+    1. Task Name
+    2. Category: Work/Personal
+    3. Description
+    4. Priority: High/Medium/Low
+    5. Due Date
+    6. Status: Not Started/Started/Done
+    Choose the option you what to update? : """)
 
                 
                 if option == "1":
@@ -51,5 +51,4 @@ def update():
                     writer = csv.writer(file)
                     writer.writerow(line)
           
-
 
