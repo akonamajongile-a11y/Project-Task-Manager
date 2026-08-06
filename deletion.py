@@ -4,7 +4,7 @@
 #     task_id = input(please enter task id)
 
 import csv
-
+import os
 def task_deletion():
     with open("tasks.csv" , "r", newline="") as file:
         reader = csv.reader(file)
@@ -27,8 +27,6 @@ def task_deletion():
     os.remove("tasksold.csv")  
 
 
-
-task_deletion()
 
     
 

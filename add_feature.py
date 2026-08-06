@@ -1,7 +1,7 @@
 def add_tasks():
     import csv 
     count = -1 
-    with open("task.csv", "r", newline="") as file: 
+    with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
                        count =  count + 1 
