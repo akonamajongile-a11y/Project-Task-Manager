@@ -8,25 +8,36 @@ def search_engine():
     print("C: Search by task due date")
     print("D: Search by category")
     
-    search_by = input("How would you like to search? ").upper()
-    search_value = ""
-    column = 0
+    
 
-    if search_by == "A":
-        search_value = input("Search by task name: ")
-        column = 1
-    elif search_by == "B":
-          search_value = input("Search by task ID:")
-          column = 0
-    elif search_by == "C":
-          search_value = input("Search task by its due date: ")
-          column = 3
-    elif search_by == "D":
-          search_value = input("Search task by category: ")
-          column = 5
-    else:
-        print("You have entered invalid option")
-
+    searchokay = False
+    while not searchokay:
+        search_by = input("How would you like to search? ").upper()
+        search_value = ""
+        column = 0
+        if search_by == "A":
+            search_value = input("Search by task name:  " )
+            print("------------------------------------")
+            column = 1
+            searchokay = True
+        elif search_by == "B":
+            search_value = input("Search by task ID:")
+            print("---------------------------------")
+            column = 0
+            searchokay = True
+        elif search_by == "C":
+            search_value = input("Search task by its due date: ")
+            print("--------------------------------------------")
+            column = 3
+            searchokay = True
+        elif search_by == "D":
+            search_value = input("Search task by category: ")
+            print("----------------------------------------")
+            column = 5
+            searchokay = True
+        else:
+            searchokay = False
+            
 
     found = False
     with open("tasks.csv", "r", newline="") as file: 
@@ -34,9 +45,8 @@ def search_engine():
 
                     for row in reader:
                         if row[column] == search_value:
-                            print(row)
-                            found = True
-                             
+                                print(row)
+                                found = True            
 
     if not found:
           print("Nothing Found")        
