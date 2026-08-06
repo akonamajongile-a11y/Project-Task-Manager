@@ -10,20 +10,17 @@ with open("tasks.csv", "r", newline="") as file:
     all = []
     for everyline in data:
         all.append(everyline)
-    for index,ev in enumerate(all):
+    for ev in all:
        # [phiwe,cpt]
-       task_id = input("please insert the task id of the task you want to delete")
-       if ev[0] == task_id:
-           all.pop(index)
-           print("found her")
-           break
-       else:
-           print("not found")
-           with open("tasks.csv", "a", newline="") as file:
-                writer = csv.writer(file)
-                writer.writerow(ev)
-           print(all)
+        if ev[0] == "phiwe7":
+            all.pop(7)
+        else:
+            print("not found")
+        print(all)
 
+with open("tasks.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(all)
 
 
 
