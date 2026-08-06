@@ -4,7 +4,7 @@
 #     task_id = input(please enter task id)
 
 import csv
-with open("tasks.csv", "r", newline="") as file:
+with open("tasks.csv" , "r", newline="") as file:
     data = csv.reader(file)
 
     all = []
