@@ -2,28 +2,30 @@
 
 # if option == 0:
 #     task_id = input(please enter task id)
+def task_deletion():
+ #task_id = input("Enter task ID to delete: ")
+    import csv
+    with open("tasks.csv" , "r", newline="") as file:
+        reader = csv.reader(file)
+    #    all_tasks = list(reader)
+   
+        updated_tasks = []
+        task_id = input("Enter task ID to delete: ")
+        reader = csv.reader(file)
+        for row in reader:
 
-import csv
-with open("tasks.csv" , "r", newline="") as file:
-    data = csv.reader(file)
+            if row[0] != task_id: 
+                updated_tasks.append(row)
+      
+            else: 
+                with open("tasks5.csv", "w", newline="") as file:
+                    writer = csv.writer(file)
+                    writer.writerow(updated_tasks)
+                    break
+      
+    
 
-    all = []
-    for everyline in data:
-        all.append(everyline)
-    for ev in all:
-       # [phiwe,cpt]
-        if ev[0] == "phiwe7":
-            all.pop(7)
-        else:
-            print("not found")
-        print(all)
-
-with open("tasks.csv", "w", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerow(all)
-
-
-
+task_deletion()
 
     
 
