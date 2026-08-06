@@ -1,6 +1,7 @@
 
 def view_task():
     import csv
+    from colorama import Fore, Style
     with open("tasks.csv" , "r" , newline="") as file:
         reader = csv.reader(file)
         task_categories = (
@@ -26,6 +27,11 @@ def view_task():
             
     print("-" * len(task_categories))       
     print(" " * 40 + "Keep going, you're doing great :)") 
+
+    
+    everything[4] = "High", "Low", "Medium"
+    if everything[4] == "High":
+        f"{Fore.RED}{everything[4]:<10}{Style.RESET_ALL}"
 
     
        
