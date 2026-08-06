@@ -1,12 +1,23 @@
+import csv
 def search_engine():
-    #print("Search by ")
-    search_by = input("enter name of task")
-    import csv
+    #search_by = input("Enter name of task:")
+    print("Search options below: ")
+    print("----------------------")
+    print("A: Search by task name")
+    print("B: Search by task ID")
+    print("C: Search by task due date")
+    print("D: Search by category")
+    search_by = input("How would you like to search? ")
+
+    if search_by == "A":
+        search_value = input("Search by task name: ")
+        column = 1
+
     with open("tasks.csv", "r", newline="") as file: 
                     reader =csv.reader(file)
 
                     for row in reader:
-                        if row[1] == search_by:
+                        if row[column] == search_value:
                             print(row)
                             
                         else:
