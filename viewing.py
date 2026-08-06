@@ -6,5 +6,3 @@ def view_task():
         print("Task ID: " + "Task Name: " + "Category: " + "Description: " + "Priority: " + "Due Date: " + "Status: ")
         for everything in reader:
             print(everything)
-
-

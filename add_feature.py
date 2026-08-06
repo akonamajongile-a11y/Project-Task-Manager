@@ -7,14 +7,33 @@ def add_tasks():
                 for e in reader: 
                        count = count + 1 
     task_ID = count + 1
-    task_name = input("Please input your tasks name:").capitalize()
-    category = input("Please select the category (Work/Personal)").capitalize()
-    valid = False
-    while not valid: 
+
+    valid_name = False
+    while not valid_name:
+        task_name = input("Please input your tasks name:").capitalize()
+        if task_name == "":
+                valid_name = False
+                print("The user is required to input a task name")
+        else: 
+                valid_name = True  
+    valid_category = False
+
+    while not valid_category:           
+        category = input("Please select the category (Work/Personal)").capitalize()
+        if category == "":
+               valid_category = False
+               print("The user is required to input a category") 
+        else: 
+               valid_category = True 
+
+    valid_description = False
+    while not valid_description: 
         description = input("Please enter the description of the task: ").capitalize()
         if description == "" :
-               valid = False
-               print("Enter something")
+               valid_description = False
+               print("The user is required to input a description")
+        else: 
+               valid_description = True
                
     valid = False
     while not valid:
@@ -31,23 +50,24 @@ def add_tasks():
         else:
             print("Please insert correct priority option!")
 
-    due_date = input("The due date of the task is (DD/MM/YYY): ")
-    import datetime 
-    due_date = datetime.datetime.now()
-    print(due_date.year)
-    print(due_date.strftime("%A"))    
-    valid = False
-    while not valid:
+    
+    from datetime import datetime 
+    due_date = input("The due date of the task is (DD/MM/YYY): ")  
+    valid_status = False
+    while not valid_status:
         status = input("Please select a status level (Not started/ Started/ Done): ").capitalize()
         if status == "Not Started": 
-                valid = True
-                print("You have selected: Not started " )
+                valid_status = True
+                print("You have selected: Not started" )
+                print("CSV Sucessfully created")
         elif status == "Started":
-                valid = True
+                valid_status = True
                 print("You have selected: Started ")
+                print("CSV Sucessfully created")
         elif status == "Done":
-                valid = True
+                valid_status = True
                 print("You have selected: Done ")
+                print("CSV Sucessfully created")
         else:
                 print("Please insert correct priority option!")
     import csv 
@@ -56,3 +76,4 @@ def add_tasks():
             writer =csv.writer(file)
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
 
+add_tasks()
