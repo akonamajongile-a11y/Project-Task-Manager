@@ -51,7 +51,5 @@ def update():
                     writer = csv.writer(file)
                     writer.writerow(line)
           
-    
 
 
-update()
