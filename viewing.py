@@ -16,9 +16,6 @@ def view_task():
         print("-" * len(task_categories))   # Seperator line
 
         for everything in reader:
-<<<<<<< HEAD
-            print(everything)
-=======
             print(
                 f"{everything[0]:<10}"
                 f"{everything[1]:<20}"
@@ -36,8 +33,3 @@ def view_task():
     if everything[4] == "High":
         f"{Fore.RED}{everything[4]:<10}{Style.RESET_ALL}"
 
-    
-       
-       
-view_task()
->>>>>>> 5e39284666a11b9b53a776afa893aeb5ed94c631
