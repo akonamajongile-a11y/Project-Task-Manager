@@ -9,11 +9,11 @@ def search_engine():
     print("C: Search by task due date")
     print("D: Search by category")
     
-    search_by = input("Enter the option from above: ").upper()
+    
 
     searchokay = False
     while not searchokay:
-        search_by = input("You have entered invalid option, please re-try: ").upper()
+        search_by = input("Enter the option from above: ").upper()
         search_value = ""
         column = 0
         if search_by == "A":
