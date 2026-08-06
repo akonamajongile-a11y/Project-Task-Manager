@@ -1,7 +1,8 @@
+import os
+import csv
 
 def task_deletion():
  #task_id = input("Enter task ID to delete: ")
-    import csv
     with open("tasks.csv" , "r", newline="") as file:
         reader = csv.reader(file)
     #    all_tasks = list(reader)
@@ -17,13 +18,18 @@ def task_deletion():
                                     writer.writerow(row)
       
             else: 
-               break
-                
+               with open("tasks5.csv", "a", newline="") as file:
+                    writer = csv.writer(file)
+                    
+ 
+
+    os.rename("tasks.csv", "tasksold.csv")           
+    os.rename("tasks5.csv", "tasks.csv")         
+    os.remove("tasksold.csv")  
 
 task_deletion()
 
     
-
 
    
 
