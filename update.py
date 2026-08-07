@@ -83,4 +83,4 @@ Choose the field you want to update (1-6): """)
         writer = csv.writer(file)
         writer.writerows(rows)
 
-update()
+#update()
