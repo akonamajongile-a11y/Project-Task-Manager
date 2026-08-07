@@ -77,7 +77,7 @@ Choose the field you want to update (1-6): """)
 
                 print("Task updated successfully.")
 
-        rows.append(line)  # Store the updated line
+        rows.append(line)  # Store the updated linel
 
     with open("tasks.csv", "w", newline="") as file:
         writer = csv.writer(file)
