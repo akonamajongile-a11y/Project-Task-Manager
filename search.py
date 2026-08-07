@@ -13,7 +13,7 @@ def search_engine():
     searchokay = False
     while not searchokay:
         search_by = input("Enter the option from above: ").upper()
-        search_value = ""#.upper()
+        search_value = ""
         column = 0
         if search_by == "A":
             search_value = input("Search by task name: ")
@@ -44,7 +44,7 @@ def search_engine():
                     reader =csv.reader(file)
 
                     for row in reader:
-                        if row[column] == search_value:
+                        if row[column] == search_value.lower():
                                 print(row)
                                 found = True            
      
