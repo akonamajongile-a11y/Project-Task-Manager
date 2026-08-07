@@ -17,6 +17,7 @@ def task_deletion():
             else: 
                with open("tasks5.csv", "a", newline="") as file:
                     writer = csv.writer(file)
+                    print("Task has been deleted.")
                     
     os.rename("tasks.csv", "tasksold.csv")           
     os.rename("tasks5.csv", "tasks.csv")         
