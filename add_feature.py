@@ -50,12 +50,10 @@ def add_tasks():
                 print("You have selected: High")
         else:
             print("Please insert correct priority option!")
-
     valid_date = False
     while not valid_date:
            due_date = input("The due date of the task is (DD/MM/YYY): ")  
            if due_date == False:
-            
             from datetime import datetime 
     try: 
            if len(due_date) != 10:
