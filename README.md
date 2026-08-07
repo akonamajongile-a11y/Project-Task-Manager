@@ -97,3 +97,160 @@ The project uses several different types of operators.
 ## **Variables**
 
 Variables are used throughout the application to store:
+
+* Task names
+* Task descriptions
+* User choices
+* Task status
+* Lists of tasks
+
+---
+
+## **Data Types**
+
+The program makes use of several Python data types, including:
+
+* **String (`str`)**
+* **Integer (`int`)**
+* **Boolean (`bool`)**
+* **List (`list`)**
+
+---
+
+## **Lists**
+
+Lists are used to:
+
+* Store task information
+* Display tasks
+* Update tasks
+* Process multiple records efficiently
+
+---
+
+## **Functions**
+
+Functions are used to organise the program into reusable sections of code.
+
+Examples include:
+
+* Displaying tasks
+* Adding tasks
+* Updating tasks
+* Saving tasks
+* Loading tasks
+
+---
+
+## **User Input**
+
+The program accepts user input using the **`input()`** function and validates the information before processing it.
+
+---
+
+## **Exception Handling**
+
+The application uses **`try`** and **`except`** statements to handle invalid user input and file-related errors without crashing the program.
+
+---
+
+## **File Handling**
+
+The project demonstrates file handling by:
+
+* Opening files
+* Reading files
+* Writing files
+* Automatically closing files using the **`with`** statement
+
+---
+
+# **Project Structure**
+
+```text
+TaskManager/
+│
+├── main.py
+├── tasks.csv
+└── README.md
+```
+
+---
+
+# **How to Run the Program**
+
+1. **Install Python 3** on your computer.
+2. Download or clone this project.
+3. Open the project folder in your terminal or command prompt.
+4. Run the program using:
+
+```bash
+python main.py
+```
+
+---
+
+# **Example Menu**
+
+```text
+==========================
+      TASK MANAGER
+==========================
+
+1. View Tasks
+2. Add Task
+3. Update Task
+4. Complete Task
+5. Exit
+
+Enter your choice:
+```
+
+---
+
+# **Learning Outcomes**
+
+By completing this project, I demonstrated an understanding of:
+
+* **Loops**
+* **Conditional Statements**
+* **Variables**
+* **Data Types**
+* **Operators**
+* **Lists**
+* **Functions**
+* **User Input**
+* **CSV File Reading and Writing**
+* **File Handling**
+* **Exception Handling**
+* **Problem Solving**
+* **Modular Programming**
+
+---
+
+# **Future Improvements**
+
+Possible enhancements include:
+
+* 📅 Adding due dates
+* ⭐ Task priorities
+* 🗑️ Delete tasks
+* 🔍 Search functionality
+* 📊 Sort tasks
+* 👤 User login system
+* 🖥️ Graphical User Interface (GUI)
+* 🗄️ SQLite database integration
+
+---
+
+# **Technologies Used**
+
+* **Python 3**
+* **CSV Module**
+* **Standard Python Libraries**
+
+---
+
+# **Author**
+
+This project was developed as part of a Python programming course to demonstrate the practical use of **loops**, **conditional statements**, **operators**, **CSV file handling**, **functions**, **lists**, **variables**, **user input**, and other fundamental programming concepts.
