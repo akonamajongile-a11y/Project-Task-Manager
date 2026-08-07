@@ -10,14 +10,13 @@ def search_engine():
     print("D: Search by category")
     
     
-
     searchokay = False
     while not searchokay:
         search_by = input("Enter the option from above: ").upper()
-        search_value = ""
+        search_value = ""#.upper()
         column = 0
         if search_by == "A":
-            search_value = input("Search by task name:  " )
+            search_value = input("Search by task name: ")
             print("------------------------------------")
             column = 1
             searchokay = True
@@ -48,11 +47,23 @@ def search_engine():
                         if row[column] == search_value:
                                 print(row)
                                 found = True            
-
+     
     if not found:
-          print("Nothing Found")        
+          print("Nothing Found")  
+          again = ""
+          while again not in ["Y", "N"]:
+                  again = input("Would you like to search again? (Y/N): ").upper()
+
+                  if again not in ["Y", "N"]:
+                        print("You have entered invalid option, select between Y & N only")
+                    
+          if again == "Y":
+                search_engine()    
+          else:
+               print("Thanks bye!")
+
                             
-#search_engine()
+search_engine()
 
 
 
