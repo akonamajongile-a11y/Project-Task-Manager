@@ -9,7 +9,6 @@ def search_engine():
     print("C: Search by task due date")
     print("D: Search by category")
     
-    
     searchokay = False
     while not searchokay:
         search_by = input("Enter the option from above: ").upper()
