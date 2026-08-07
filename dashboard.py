@@ -11,7 +11,16 @@ def task_dashboard():
     import csv
     with open("tasks.csv" , "r" , newline="") as file:
         reader = csv.reader(file)
+    from datetime import datetime
+    today = datetime.today().date()  # current date
+    import csv
+    with open("tasks.csv" , "r" , newline="") as file:
+        reader = csv.reader(file)
 
+        for everything in reader:
+            total_tasks += 1
+            status = everything[6].lower() 
+            due_date = datetime.strptime(everything[5], "%Y-%m-%d").date()
         for everything in reader:
             total_tasks += 1
             status = everything[6].lower() 
@@ -20,7 +29,13 @@ def task_dashboard():
             # Count completed tasks
             if status == "done":
                         completed_tasks += 1
+            # Count completed tasks
+            if status == "done":
+                        completed_tasks += 1
 
+            # Count overdue tasks (not done AND due date before today)
+            if status != "done" and due_date < today:
+                overdue_tasks += 1
             # Count overdue tasks (not done AND due date before today)
             if status != "done" and due_date < today:
                 overdue_tasks += 1
