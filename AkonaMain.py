@@ -1,7 +1,8 @@
 import add_feature
 import update
-#import deletion
+import deletion
 import viewing
+import search
 
 def task():
     print("Welcome to Task Manager")
@@ -17,11 +18,14 @@ def task():
     if option == '1':
         add_feature.add_tasks()
     elif option == '2':
-        update.edit_task()
-        # if option == '3':
-        #     deletion.delete_task()
+        update.update()
+    elif option == '3':
+        deletion.task_deletion()
     elif option == '4':
         viewing.view_task()
+
+    elif option == '5':
+        search.search_engine()
 
     else:
         print("Please insert a correct option!")
