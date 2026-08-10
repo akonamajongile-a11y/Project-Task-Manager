@@ -28,10 +28,6 @@ def task_dashboard():
                 overdue_tasks +=1
                 
 
-                
-            
-
-
     print("==========================")
     print(" " * 5 + "Task Dashboard")
     print("==========================")
@@ -39,7 +35,16 @@ def task_dashboard():
     print(f"Completed Tasks: {completed_tasks}")
     print(f"Overdue Tasks: {overdue_tasks}")
     print("==========================")
+   
+
+# Calculate percentages
+    if total_tasks > 0:
+        completed_percentage = (completed_tasks / total_tasks) * 100
+        overdue_percentage = (overdue_tasks / total_tasks) * 100
+
+    
+    print(f"% of Completed tasks: ({completed_percentage:.2f}%)")
+    print(f"% of Overdue tasks: ({overdue_percentage:.2f}%)")
+    print("==========================")
     print("Keep going, you’re doing great!")
-
-
 task_dashboard()
