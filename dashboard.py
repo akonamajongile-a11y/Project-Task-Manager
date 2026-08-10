@@ -27,18 +27,27 @@ def task_dashboard():
             due_date = datetime.strptime(everything[5], "%Y-%m-%d").date()
 
             # Count completed tasks
-            if status == "done":
-                        completed_tasks += 1
-            # Count completed tasks
-            if status == "done":
-                        completed_tasks += 1
+        for everything in reader:
+            status = everything[6]
+            if status == "Done":
+                completed_tasks += 1
+
+        completed_tasks = 0
+        for everything in reader:
+            status = everything[6].strip().lower()   # normalize text
+            if status == "Done":
+              completed_tasks += 1
+
+            # Count overdue tasks: Pending & due date is before today
+            if status.lower() == "pending" and due_date < today:
+                overdue_tasks += 1
 
             # Count overdue tasks (not done AND due date before today)
-            if status != "done" and due_date < today:
-                overdue_tasks += 1
+            #if status != "done" and due_date < today:
+               # overdue_tasks += 1
             # Count overdue tasks (not done AND due date before today)
-            if status != "done" and due_date < today:
-                overdue_tasks += 1
+           # if status != "done" and due_date < today:
+               # overdue_tasks += 1
 
 
     print("==========================")

@@ -5,7 +5,7 @@ def view_task():
     with open("tasks.csv" , "r" , newline="") as file:
         reader = csv.reader(file)
         task_categories = (
-            f"{'Task ID':<10}"
+            f"{'Task ID':<10/t/t/t}"
             f"{'Task Name':<20}"
             f"{'Category':<12}"
             f"{'Description':<35}"
@@ -17,7 +17,7 @@ def view_task():
 
         for everything in reader:
             print(
-                f"{everything[0]:<10}"
+                f"{everything[0]:<10}"   #/t/t/t/
                 f"{everything[1]:<20}"
                 f"{everything[2]:<12}"
                 f"{everything[3]:<35}"
