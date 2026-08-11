@@ -4,10 +4,10 @@ def search_engine():
     print("----------------------")
     print("Search options below: ")
     print("----------------------")
-    print("A: Search by task name")
-    print("B: Search by task ID")
-    print("C: Search by task due date")
-    print("D: Search by category")
+    print("A: Search by task ID ")
+    print("B: Search by task name")
+    print("C: Search by task category")
+    print("D: Search by task due date")
     
     searchokay = False
     while not searchokay:
@@ -15,22 +15,22 @@ def search_engine():
         search_value = ""
         column = 0
         if search_by == "A":
-            search_value = input("Search by task name: ")
+            search_value = input("Search by task ID: ")
             print("------------------------------------")
-            column = 1
-            searchokay = True
-        elif search_by == "B":
-            search_value = input("Search by task ID:")
-            print("---------------------------------")
             column = 0
             searchokay = True
+        elif search_by == "B":
+            search_value = input("Search by task name:")
+            print("---------------------------------")
+            column = 1
+            searchokay = True
         elif search_by == "C":
-            search_value = input("Search task by its due date: ")
+            search_value = input("Search task by category: ")
             print("--------------------------------------------")
-            column = 3
+            column = 2
             searchokay = True
         elif search_by == "D":
-            search_value = input("Search task by category: ")
+            search_value = input("Search task by its due date: ")
             print("----------------------------------------")
             column = 5
             searchokay = True
@@ -43,7 +43,9 @@ def search_engine():
                     reader =csv.reader(file)
 
                     for row in reader:
-                        if row[column] == search_value.lower():
+                        if not row:
+                           continue 
+                        if search_value.strip().lower() in row[column].strip().lower(): 
                                 print(row)
                                 found = True            
      
@@ -60,9 +62,8 @@ def search_engine():
                 search_engine()    
           else:
                print("Thanks bye!")
-
+search_engine()
                             
-#search_engine()
 
 
 
