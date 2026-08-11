@@ -58,8 +58,7 @@ def add_tasks():
                   valid_date = False
                   print("This is a required field.")
            else: 
-                  valid_date = True 
-                    
+                  valid_date = True               
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
