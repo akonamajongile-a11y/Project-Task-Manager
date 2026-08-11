@@ -1,6 +1,6 @@
 def add_tasks():
     import csv 
-    count = -1 
+    count = 0 
     with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
@@ -85,4 +85,7 @@ def add_tasks():
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])
+<<<<<<< HEAD
 add_tasks()
+=======
+>>>>>>> 8958a08f3c4b550cbfc2153c92c756d9d990639a
