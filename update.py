@@ -74,8 +74,8 @@ Choose the field you want to update (1-6): """)
                         print("Please enter Not Started, Started, or Done.")
                         status = input("Enter the new status (Not Started/Started/Done): ").title().strip()
                     line[6] = status
-
-                print("Task updated successfully.")
+                else:
+                 print("Task updated successfully.")
 
         rows.append(line)  # Store the updated linel
 
@@ -83,4 +83,3 @@ Choose the field you want to update (1-6): """)
         writer = csv.writer(file)
         writer.writerows(rows)
 
-#update()
