@@ -5,12 +5,14 @@ def update():
     import csv
 
     task_ID = input("Please input the Task ID of the task you want to update: ")
-    rows = []  # List to store all rows
+    rows = [] 
+    found = False # List to store all rows
     with open("tasks.csv", "r", newline="") as file:
         reader = csv.reader(file)
 
         for line in reader:
             if line[0] == task_ID:
+                found = True
 
                 option = input("""
 1. Task Name
@@ -22,10 +24,6 @@ def update():
 Choose the field you want to update (1-6): """)
 
                 valid_options = ["1", "2", "3", "4", "5", "6"]
-
-                while option not in valid_options:
-                    print("Please enter a valid option!")
-                    option = input("Choose the field you want to update (1-6): ")
 
                 if option == "1":
                     task_name = input("Enter the new task name: ").capitalize().strip()
@@ -74,13 +72,20 @@ Choose the field you want to update (1-6): """)
                         print("Please enter Not Started, Started, or Done.")
                         status = input("Enter the new status (Not Started/Started/Done): ").title().strip()
                     line[6] = status
+                else:
+                    while option not in valid_options:
+                        print("Please enter a valid option!")
+                        option = input("Choose the field you want to update (1-6): ")
+    
+            rows.append(line)
 
-                print("Task updated successfully.")
+        if not found:
+         print("Task ID not found!")
+         return
 
-        rows.append(line)  # Store the updated linel
-
-    with open("tasks.csv", "w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(rows)
+        with open("tasks.csv", "w", newline="") as file:
+         writer = csv.writer(file)
+         writer.writerows(rows)
+         print("Task updated successfully!")
 
 #update()
