@@ -11,7 +11,7 @@ def notifications():
             for e in reader:
                 task_id = e[0]
                 today = datetime.now().date()
-                due_date = datetime.strptime(e[5], "%Y-%m-%d").date()
+                due_date = datetime.strptime(e[5], "%d/%m/%Y").date()
                 days_left = (due_date - today).days
                 if days_left < 0:
                     print(task_id, "You are overdue with your tasks")
