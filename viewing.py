@@ -16,7 +16,7 @@ def view_task():
 
         for everything in reader:
             print(
-                f"{everything[0]:<10}"
+                f"{everything[0]:<10}"   #/t/t/t/
                 f"{everything[1]:<20}"
                 f"{everything[2]:<12}"
                 f"{everything[3]:<35}"
