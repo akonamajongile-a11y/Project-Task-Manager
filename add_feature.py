@@ -50,24 +50,11 @@ def add_tasks():
                 print("You have selected: High")
         else:
             print("Please insert correct priority option!")
-<<<<<<< HEAD
-    from datetime import datetime 
-    valid_date = False
-    while not valid_date:
-           due_date = input("The due date of the task is (DD/MM/YYY): ")  
-           if due_date == "":
-                  valid_date = False
-                  print("This is a required field.")
-           else: 
-                  valid_date = True 
-                    
-=======
     valid_date = False
     while not valid_date:
            due_date = input("The due date of the task is (DD/MM/YYY): ")  
            if due_date == False:
             from datetime import datetime 
->>>>>>> notifications
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
