@@ -40,7 +40,6 @@ def task_dashboard():
         reader = csv.reader(file)
 
         for everything in reader:
-            total_tasks += 1
             status = everything[2].lower()
 
            # Count Tasks per Category:
