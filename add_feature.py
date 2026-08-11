@@ -1,6 +1,6 @@
 def add_tasks():
     import csv 
-    count = -1 
+    count = 0 
     with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
@@ -50,7 +50,6 @@ def add_tasks():
                 print("You have selected: High")
         else:
             print("Please insert correct priority option!")
-<<<<<<< HEAD
     from datetime import datetime 
     valid_date = False
     while not valid_date:
@@ -61,13 +60,6 @@ def add_tasks():
            else: 
                   valid_date = True 
                     
-=======
-    valid_date = False
-    while not valid_date:
-           due_date = input("The due date of the task is (DD/MM/YYY): ")  
-           if due_date == False:
-            from datetime import datetime 
->>>>>>> notifications
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
@@ -97,4 +89,4 @@ def add_tasks():
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
-            writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
+            writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])

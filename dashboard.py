@@ -17,7 +17,7 @@ def task_dashboard():
         for everything in reader:
             total_tasks += 1
             status = everything[6].lower() 
-            due_date = datetime.strptime(everything[5], "%Y-%m-%d").date()
+            due_date = datetime.strptime(everything[5], "%d/%m/%Y").date()
         
             # Count Completed Tasks: "Done"
             if everything[6] == "Done":
