@@ -58,7 +58,6 @@ def notifications():
 
 
 
-notifications()
 
 
                 
