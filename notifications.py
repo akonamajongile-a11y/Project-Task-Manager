@@ -1,16 +1,23 @@
 def notifications(): 
+        from datetime import datetime 
+        print(" ======== TASK NOTIFICATIONS ========")
+        today = datetime.now().date()
         import csv 
         count = 0
         with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
-                       count = count + 1
-                       print(" ======== TASK NOTIFICATIONS ========")
-        from datetime import datetime 
-        today = "07/08/2026"
+                        count = count + 1
+
+        due_date = datetime.strptime("due_date" , "%d/%m/%Y").date()
+        days_remaining = (due_date - today).days
+        if days_remaining < 0:
+                print("You are overdue with your tasks")
+        elif days_remaining <= 7:
+                print("Please note that your task is close to the due date")
+                
         valid_date = False
         while not valid_date:
-                due_date = input("The due date of the task is (DD/MM/YYY): ")  
                 if due_date == False:
                         from datetime import datetime 
                 try: 
@@ -28,37 +35,7 @@ def notifications():
                         print("You are overdue with your tasks")
                 else:
                         valid_date = True
-                        print("Please note that your task is close to the due date")
+                        print("Please note that your task is close to the due date")   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-    
+notifications()
