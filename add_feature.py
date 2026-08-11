@@ -18,10 +18,8 @@ def add_tasks():
     while not valid_category:           
         category = input("Please select the category (Work/Personal):").capitalize().strip()
         if category == "Work":
-               valid_category = True
                print("You have made a selection: Work ")
         elif category == "Personal":
-               valid_category = True
                print("You have a made seletion: Personal")
         else: 
                print("You have made an incorrect selection")
@@ -55,12 +53,13 @@ def add_tasks():
     from datetime import datetime 
     valid_date = False
     while not valid_date:
-           due_date = input("The due date of the task is (DD/MM/YYY): ")  
+           due_date = input("The due date of the task is (DD/MM/YYYY): ")  
            if due_date == "":
                   valid_date = False
                   print("This is a required field.")
            else: 
-                  valid_date = True           
+                  valid_date = True 
+                    
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
@@ -68,16 +67,13 @@ def add_tasks():
            print("Valid date: ", date_obj)
     except ValueError as e: 
            print("Error: ", e)
+           
     valid_status = False
     while not valid_status:
-        status = input("Please select a status level (Not started/ Started/ Done): ").capitalize().strip()
-        if status == "Not started": 
+        status = input("Please select a status level (Pending/ Done): ").capitalize().strip()
+        if status == "Pending":
                 valid_status = True
-                print("You have selected: Not started" )
-                print("CSV Sucessfully created")
-        elif status == "Started":
-                valid_status = True
-                print("You have selected: Started ")
+                print("You have selected: Pending ")
                 print("CSV Sucessfully created")
         elif status == "Done":
                 valid_status = True
@@ -89,5 +85,6 @@ def add_tasks():
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
-            writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
+            writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])
 
+add_tasks()
