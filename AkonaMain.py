@@ -3,15 +3,14 @@ import update
 import deletion
 import viewing
 import search
+
+import notification
 import dashboard
 
 def task():
     print("Welcome to Task Manager")
     print("Top 5 tasks for the day")
-    # def get_top_tasks():
-    # # Get today's date in YYYY-MM-DD format
-    # today_str = datetime.today().strftime('%Y-%m-%d')
-    # todays_tasks = []
+    
     print("To continue, select an option below")
     print("1: Add Task")
     print("2: Update Task")
@@ -19,6 +18,7 @@ def task():
     print("4: View Task")
     print("5: Search Task")
     print("6: View your Dashboard")
+    print("7 See Notifiations")
 
     option = input("Please select your option")
 
@@ -37,6 +37,8 @@ def task():
     elif option == '6':
         dashboard.task_dashboard()
 
+    elif option == '7':
+        notification.notifications()
 
     else:
         print("Please insert a correct option!")
