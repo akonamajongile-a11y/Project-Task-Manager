@@ -50,8 +50,15 @@ def add_tasks():
                 print("You have selected: High")
         else:
             print("Please insert correct priority option!")
-    from datetime import datetime 
-    due_date = input("The due date of the task is (DD/MM/YYY): ")  
+    valid_date = False
+    while not valid_date:
+           due_date = input("The due date of the task is (DD/MM/YYYY): ")  
+           if due_date == "":
+                  valid_date = False
+                  print("This is a required field.")
+           else: 
+                  valid_date = True 
+                    
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
@@ -61,14 +68,10 @@ def add_tasks():
            print("Error: ", e)
     valid_status = False
     while not valid_status:
-        status = input("Please select a status level (Not started/ Started/ Done): ").capitalize().strip()
-        if status == "Not started": 
+        status = input("Please select a status level (Pending/ Done): ").capitalize().strip()
+        if status == "Pending":
                 valid_status = True
-                print("You have selected: Not started" )
-                print("CSV Sucessfully created")
-        elif status == "Started":
-                valid_status = True
-                print("You have selected: Started ")
+                print("You have selected: Pending ")
                 print("CSV Sucessfully created")
         elif status == "Done":
                 valid_status = True
@@ -81,4 +84,5 @@ def add_tasks():
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
             writer.writerows([[task_ID, task_name, description, due_date, priority, category, status]])
-add_tasks()
+
+
