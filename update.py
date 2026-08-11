@@ -20,7 +20,7 @@ def update():
 3. Description
 4. Priority: High/Medium/Low
 5. Due Date
-6. Status: Not Started/Started/Done
+6. Status: Pending/Done
 Choose the field you want to update (1-6): """)
 
                 valid_options = ["1", "2", "3", "4", "5", "6"]
@@ -67,10 +67,10 @@ Choose the field you want to update (1-6): """)
                          
 
                 elif option == "6":
-                    status = input("Enter the new status (Not Started/Started/Done): ").title().strip()
-                    while status not in ["Not Started", "Started", "Done"]:
-                        print("Please enter Not Started, Started, or Done.")
-                        status = input("Enter the new status (Not Started/Started/Done): ").title().strip()
+                    status = input("Enter the new status (Pending/Done): ").title().strip()
+                    while status not in ["Pending", "Done"]:
+                        print("Which status are you updating (Pending/Done)? ")
+                        status = input("Enter the new status (Pending/Done): ").title().strip()
                     line[6] = status
                 else:
                     while option not in valid_options:
