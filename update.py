@@ -1,9 +1,9 @@
 from datetime import datetime
 
+import csv
 
 def update():
-    import csv
-
+    
     task_ID = input("Please input the Task ID of the task you want to update: ")
     rows = [] 
     found = False # List to store all rows
