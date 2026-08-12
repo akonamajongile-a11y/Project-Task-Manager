@@ -1,6 +1,7 @@
 def add_tasks():
     import csv 
-    count = 0 
+    from datetime import datetime 
+    count = 0
     with open("tasks.csv", "r", newline="") as file: 
                 reader =csv.reader(file)
                 for e in reader: 
@@ -49,32 +50,18 @@ def add_tasks():
                 print("You have selected: High")
         else:
             print("Please insert correct priority option!")
-
-    from datetime import datetime
     valid_date = False
     while not valid_date:
-           due_date = input("The due date of the task is (DD/MM/YYYY): ")  
-           if due_date == "":
-<<<<<<< HEAD
-            valid_date = False
-            print("This is a required field")  
-
-           else:
-                  valid_date = True
-=======
-                  valid_date = False
-                  print("This is a required field.")
-           else: 
-                  valid_date = True 
->>>>>>> add_feature
-    try: 
+       due_date = input("The due date of the task is (DD/MM/YYYY): ")  
+       try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
            date_obj = datetime.strptime(due_date, "%d/%m/%Y")
            print("Valid date: ", date_obj)
-    except ValueError as e: 
+           valid_date = True
+       except ValueError as e: 
            print("Error: ", e)
-    valid_status = False
+           valid_status = False
     while not valid_status:
         status = input("Please select a status level (Pending/ Done): ").capitalize().strip()
         if status == "Pending": 
@@ -88,14 +75,8 @@ def add_tasks():
         else:
                 print("Please insert correct status option!")
 
-    import csv 
+
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
-<<<<<<< HEAD
             writer.writerows([[task_ID, task_name,category, description, priority, due_date, status]])
 #add_tasks()
-=======
-            writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])
-
-add_tasks()
->>>>>>> add_feature

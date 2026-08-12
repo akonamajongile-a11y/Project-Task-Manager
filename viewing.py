@@ -17,7 +17,6 @@ def view_task():
 
         for everything in reader:
             print(
-<<<<<<< HEAD
                 f"{everything[0]:<10}"   #/t/t/t/
                 f"{everything[1]:<20}"
                 f"{everything[2]:<12}"
@@ -41,6 +40,7 @@ def view_task():
 
          #{Style.RESET_ALL}"
 
+<<<<<<< HEAD
 =======
                 f"{everything[0]:<10}\t"
                 f"{everything[1]:<20}\t"
@@ -60,3 +60,5 @@ view_task()
 
 view_task()
 >>>>>>> dashboard.py
+=======
+>>>>>>> d1748ada722f68f9228d5f95314d8ab6d7280a41

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 1,Finish Homework,Work,Complete math exercises,High,2026-08-07,Pending
 2,Buy Groceries,Personal,Weekly shopping list,Medium,2026-08-08,Done
 3,Gym Workout,Personal,Morning cardio session,High,2026-08-07,Pending
@@ -20,3 +21,13 @@
 10,Team Meeting,Work,Discuss project updates,Medium,07/08/2026,Done
 11,Shopping,Personal,Birthday present shopping,Low,01/08/2026,Pending
 >>>>>>> dashboard.py
+=======
+1,Finish Homework,Work,Complete math exercises,High,12/08/2026,Pending
+2,Buy Groceries,Personal,Weekly shopping list,Medium,12/08/2026,Done
+3,Gym Workout,Personal,Morning cardio session,High,12/08/2026,Pending
+4,Call Mom,Personal,Check in with her,Low,12/08/2026,Pending
+5,Project Report,Work,Write summary for meeting,High,12/08/2026,Pending
+6,Pay Bills,Personal,Electricity and water payments,Medium,12/08/2026,Done
+8,Doctor Appointment,Personal,Annual check-up,High,12/08/2026,Pending
+10,Lucky,Personal,Dssd,Low,09/08/2026,Done
+>>>>>>> d1748ada722f68f9228d5f95314d8ab6d7280a41
