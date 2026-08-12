@@ -28,6 +28,7 @@ def view_task():
     print("-" * len(task_categories))       
     print(" " * 40 + "Keep going, you're doing great :)") 
 
+<<<<<<< HEAD
 
 
     RED = "\033[31m"
@@ -39,3 +40,25 @@ def view_task():
 
          #{Style.RESET_ALL}"
 
+<<<<<<< HEAD
+=======
+                f"{everything[0]:<10}\t"
+                f"{everything[1]:<20}\t"
+                f"{everything[2]:<12}\t"
+                f"{everything[3]:<35}\t"
+                f"{everything[4]:<10}\t"
+                f"{everything[5]:<15}\t"
+                f"{everything[6]:<10}\t")
+            
+    print("=" * len(task_categories))       
+    print(" " * 50 + "You're doing amazing sweetie!") 
+    print("=" * len(task_categories))
+       
+view_task()
+>>>>>>> viewing
+=======
+
+view_task()
+>>>>>>> dashboard.py
+=======
+>>>>>>> d1748ada722f68f9228d5f95314d8ab6d7280a41
