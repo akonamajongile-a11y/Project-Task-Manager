@@ -29,6 +29,7 @@ def view_task():
     print("-" * len(task_categories))       
     print(" " * 40 + "Keep going, you're doing great :)") 
 
+<<<<<<< HEAD
 
 
     RED = "\033[31m"
@@ -55,3 +56,7 @@ def view_task():
        
 view_task()
 >>>>>>> viewing
+=======
+
+view_task()
+>>>>>>> dashboard.py
