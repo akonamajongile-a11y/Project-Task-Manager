@@ -138,7 +138,7 @@ Examples include:
 * Adding tasks
 * Updating tasks
 * Saving tasks
-* Loading tasks
+* Deleting tasks
 
 ---
 
@@ -148,11 +148,7 @@ The program accepts user input using the **`input()`** function and validates th
 
 ---
 
-## **Exception Handling**
 
-The application uses **`try`** and **`except`** statements to handle invalid user input and file-related errors without crashing the program.
-
----
 
 ## **File Handling**
 
@@ -185,7 +181,7 @@ TaskManager/
 4. Run the program using:
 
 ```bash
-python main.py
+python Akonamain.py
 ```
 
 ---
@@ -222,9 +218,7 @@ By completing this project, I demonstrated an understanding of:
 * **User Input**
 * **CSV File Reading and Writing**
 * **File Handling**
-* **Exception Handling**
 * **Problem Solving**
-* **Modular Programming**
 
 ---
 
@@ -232,14 +226,11 @@ By completing this project, I demonstrated an understanding of:
 
 Possible enhancements include:
 
-* 📅 Adding due dates
-* ⭐ Task priorities
-* 🗑️ Delete tasks
-* 🔍 Search functionality
+
 * 📊 Sort tasks
 * 👤 User login system
 * 🖥️ Graphical User Interface (GUI)
-* 🗄️ SQLite database integration
+* 🗄️ SQL database integration
 
 ---
 
