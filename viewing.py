@@ -4,18 +4,20 @@ def view_task():
     with open("tasks.csv" , "r" , newline="") as file:
         reader = csv.reader(file)
         task_categories = (
-            f"{'Task ID':<10}"
-            f"{'Task Name':<20}"
-            f"{'Category':<12}"
-            f"{'Description':<35}"
-            f"{'Priority':<10}"
-            f"{'Due Date':<15}"
-            f"{'Status':<10}")
+            f"{'Task ID':<10}\t"
+            f"{'Task Name':<20}\t"
+            f"{'Category':<12}\t"
+            f"{'Description':<35}\t"
+            f"{'Priority':<10}\t"
+            f"{'Due Date':<15}\t"
+            f"{'Status':<10}\t")
+        print("=" * len(task_categories))
         print(task_categories)
-        print("-" * len(task_categories))   # Seperator line
+        print("=" * len(task_categories))   # Seperator line
 
         for everything in reader:
             print(
+<<<<<<< HEAD
                 f"{everything[0]:<10}"   #/t/t/t/
                 f"{everything[1]:<20}"
                 f"{everything[2]:<12}"
@@ -38,3 +40,18 @@ def view_task():
 
          #{Style.RESET_ALL}"
 
+=======
+                f"{everything[0]:<10}\t"
+                f"{everything[1]:<20}\t"
+                f"{everything[2]:<12}\t"
+                f"{everything[3]:<35}\t"
+                f"{everything[4]:<10}\t"
+                f"{everything[5]:<15}\t"
+                f"{everything[6]:<10}\t")
+            
+    print("=" * len(task_categories))       
+    print(" " * 50 + "You're doing amazing sweetie!") 
+    print("=" * len(task_categories))
+       
+view_task()
+>>>>>>> viewing
