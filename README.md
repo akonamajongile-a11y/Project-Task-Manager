@@ -164,9 +164,9 @@ The project demonstrates file handling by:
 # **Project Structure**
 
 ```text
-TaskManager/
+Project-Task-Manager/
 │
-├── main.py
+├── Akonamain.py
 ├── add_feature.py
 ├── dashboard.py
 ├── deletion.py
