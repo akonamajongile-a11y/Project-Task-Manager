@@ -1,4 +1,4 @@
-# 📝 Task Manager Application
+# Task Manager Application
 
 ## **Overview**
 
@@ -10,14 +10,14 @@ This project demonstrates the use of **fundamental Python programming concepts**
 
 # **Features**
 
-* ✅ Add new tasks
-* ✅ View all tasks
-* ✅ Update existing tasks
-* ✅ Mark tasks as completed
-* ✅ Save tasks to a CSV file
-* ✅ Load tasks from a CSV file
-* ✅ Menu-driven interface
-* ✅ Data is saved between program sessions
+* Add new tasks
+* View all tasks
+* Update existing tasks
+* Mark tasks as completed
+* Save tasks to a CSV file
+* Load tasks from a CSV file
+* Menu-driven interface
+* Data is saved between program sessions
 
 ---
 
@@ -227,10 +227,10 @@ By completing this project, I demonstrated an understanding of:
 Possible enhancements include:
 
 
-* 📊 Sort tasks
-* 👤 User login system
-* 🖥️ Graphical User Interface (GUI)
-* 🗄️ SQL database integration
+* Sort tasks
+* User login system
+* Graphical User Interface (GUI)
+* SQL database integration
 
 ---
 
