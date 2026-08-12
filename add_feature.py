@@ -18,16 +18,15 @@ def add_tasks():
     while not valid_category:           
         category = input("Please select the category (Work/Personal):").capitalize().strip()
         if category == "Work":
+               valid_category = True
                print("You have made a selection: Work ")
         elif category == "Personal":
+               valid_category = True
                print("You have a made seletion: Personal")
         else: 
-               print("You have made an incorrect selection")
-        if category == "":
                valid_category = False
-               print("This is a required field.") 
-        else: 
-               valid_category = True 
+               print("This is a required field")
+               
     valid_description = False
     while not valid_description: 
         description = input("Please enter the description of the task: ").capitalize().strip()
@@ -56,11 +55,18 @@ def add_tasks():
     while not valid_date:
            due_date = input("The due date of the task is (DD/MM/YYYY): ")  
            if due_date == "":
+<<<<<<< HEAD
             valid_date = False
             print("This is a required field")  
 
            else:
                   valid_date = True
+=======
+                  valid_date = False
+                  print("This is a required field.")
+           else: 
+                  valid_date = True 
+>>>>>>> add_feature
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
@@ -68,7 +74,6 @@ def add_tasks():
            print("Valid date: ", date_obj)
     except ValueError as e: 
            print("Error: ", e)
-           
     valid_status = False
     while not valid_status:
         status = input("Please select a status level (Pending/ Done): ").capitalize().strip()
@@ -86,5 +91,11 @@ def add_tasks():
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
+<<<<<<< HEAD
             writer.writerows([[task_ID, task_name,category, description, priority, due_date, status]])
 #add_tasks()
+=======
+            writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])
+
+add_tasks()
+>>>>>>> add_feature
