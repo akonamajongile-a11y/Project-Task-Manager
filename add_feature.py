@@ -55,18 +55,11 @@ def add_tasks():
     while not valid_date:
            due_date = input("The due date of the task is (DD/MM/YYYY): ")  
            if due_date == "":
-<<<<<<< HEAD
             valid_date = False
             print("This is a required field")  
 
            else:
                   valid_date = True
-=======
-                  valid_date = False
-                  print("This is a required field.")
-           else: 
-                  valid_date = True 
->>>>>>> add_feature
     try: 
            if len(due_date) != 10:
                   raise ValueError("Incorrect format length")
@@ -91,11 +84,5 @@ def add_tasks():
     import csv 
     with open("tasks.csv", "a", newline="") as file: 
             writer =csv.writer(file)    
-<<<<<<< HEAD
             writer.writerows([[task_ID, task_name,category, description, priority, due_date, status]])
 #add_tasks()
-=======
-            writer.writerows([[task_ID, task_name, category, description, priority, due_date, status]])
-
-add_tasks()
->>>>>>> add_feature
