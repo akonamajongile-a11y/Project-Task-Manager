@@ -58,7 +58,7 @@ def task_dashboard():
     print("=====================================")
     print(f"Total Tasks: {total_tasks}")
     print(f"Completed Tasks: {completed_tasks}")
-    print(f"Pending Tasks: {pending_tasks}")
+    print(f"Incomplete Tasks: {pending_tasks}")
     print(f"Overdue Tasks: {overdue_tasks}")
     print("=====================================")
     print(f"Work Tasks: {work_tasks}")
@@ -75,13 +75,13 @@ def task_dashboard():
         personal_percentage = (personal_tasks / total_tasks) * 100
 
     print(f"Distribution Of Tasks Per Status:")
-    print(f"% of Completed tasks: ({completed_percentage:.2f}%)")
-    print(f"% of Pending tasks: ({pending_percentage:.2f}%)")
-    print(f"% of Overdue tasks: ({overdue_percentage:.2f}%)")
+    print(f"% of Completed Tasks: ({completed_percentage:.2f}%)")
+    print(f"% of Incomplete Tasks: ({pending_percentage:.2f}%)")
+    print(f"% of Overdue Tasks: ({overdue_percentage:.2f}%)")
     print("====================================")
     print(f"Distribution Of Tasks Per Category:")
-    print(f"% of Work tasks: ({work_percentage:.2f}%)")
-    print(f"% of Personal tasks: ({personal_percentage:.2f}%)")
+    print(f"% of Work Tasks: ({work_percentage:.2f}%)")
+    print(f"% of Personal Tasks: ({personal_percentage:.2f}%)")
     print("====================================")
     print("Keep going, you’re doing great :)")
 
