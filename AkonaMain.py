@@ -5,12 +5,23 @@ import viewing as view
 import search 
 import notifications as nt
 import dashboard as db
+import csv 
+from datetime import datetime 
 
-def task():
-    print("Welcome to Task Manager")
-    print("Top 5 tasks for the day")
-
+print("Welcome to Task Manager")
+print("Top 5 tasks for the day")
+def get_top_tasks():
+            with open("tasks.csv", "r", newline="") as file: 
+                reader = csv.reader(file)
     
+                for e in reader:
+                    task_id = e[0]
+                    today = datetime.now().date()
+                    due_date = datetime.strptime(e[5], "%d/%m/%Y").date()
+                    if due_date == today:
+                         print(e)
+get_top_tasks()
+def task():
     print("To continue, select an option below")
     print("1: Add Task")
     print("2: Update Task")
