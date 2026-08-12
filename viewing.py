@@ -24,7 +24,7 @@ def view_task():
                 f"{everything[5]:<15}"
                 f"{everything[6]:<10}")
             
-    print("-" * len(task_categories))       
+    print("=" * len(task_categories))       
     print(" " * 40 + "Keep going, you're doing great :)") 
 
        
