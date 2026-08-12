@@ -28,4 +28,3 @@ def view_task():
     print("=" * len(task_categories))       
     print(" " * 50 + "You're doing amazing sweetie!") 
     print("=" * len(task_categories))
-       
