@@ -167,6 +167,13 @@ The project demonstrates file handling by:
 TaskManager/
 │
 ├── main.py
+├── add_feature.py
+├── dashboard.py
+├── deletion.py
+├── notifications.py
+├── search.py
+├── update.py
+├── viewing.py
 ├── tasks.csv
 └── README.md
 ```
