@@ -9,7 +9,7 @@ import csv
 from datetime import datetime 
 
 print("Welcome to Task Manager")
-print("Top 5 tasks for the day")
+print("Top 5 tasks for the day:")
 def get_top_tasks():
             with open("tasks.csv", "r", newline="") as file: 
                 reader = csv.reader(file)
