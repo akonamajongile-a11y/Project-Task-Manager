@@ -17,7 +17,6 @@ def view_task():
 
         for everything in reader:
             print(
-<<<<<<< HEAD
                 f"{everything[0]:<10}"   #/t/t/t/
                 f"{everything[1]:<20}"
                 f"{everything[2]:<12}"
@@ -40,18 +39,3 @@ def view_task():
 
          #{Style.RESET_ALL}"
 
-=======
-                f"{everything[0]:<10}\t"
-                f"{everything[1]:<20}\t"
-                f"{everything[2]:<12}\t"
-                f"{everything[3]:<35}\t"
-                f"{everything[4]:<10}\t"
-                f"{everything[5]:<15}\t"
-                f"{everything[6]:<10}\t")
-            
-    print("=" * len(task_categories))       
-    print(" " * 50 + "You're doing amazing sweetie!") 
-    print("=" * len(task_categories))
-       
-view_task()
->>>>>>> viewing
