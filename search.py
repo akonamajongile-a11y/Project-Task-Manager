@@ -7,7 +7,9 @@ def search_engine():
     print("A: Search by task ID ")
     print("B: Search by task name")
     print("C: Search by task category")
-    print("D: Search by task due date")
+    print("D: Search by task priority")
+    print("E: Search by status")
+    print("F: Search by due date")
     
     searchokay = False
     while not searchokay:
@@ -15,25 +17,40 @@ def search_engine():
         search_value = ""
         column = 0
         if search_by == "A":
-            search_value = input("Search by task ID: ")
+            search_value = input("Search task by ID: ")
             print("------------------------------------")
             column = 0
             searchokay = True
+
         elif search_by == "B":
-            search_value = input("Search by task name:")
+            search_value = input("Search task by name:")
             print("---------------------------------")
             column = 1
             searchokay = True
+
         elif search_by == "C":
             search_value = input("Search task by category: ")
             print("--------------------------------------------")
             column = 2
             searchokay = True
+
         elif search_by == "D":
+             search_value = input("Search task by priority:")
+             print("---------------------------------------")
+             column = 4
+             searchokay = True
+
+        elif search_by == "F":
             search_value = input("Search task by its due date: ")
             print("----------------------------------------")
             column = 5
             searchokay = True
+            
+        elif search_by == "E":
+              search_value = input("Search task by status: ")
+              print("--------------------------------------")
+              column = 6
+              searchokay = True
         else:
             searchokay = False
             
