@@ -14,8 +14,9 @@ def notifications():
                 due_date = datetime.strptime(e[5], "%d/%m/%Y").date()
                 days_left = (due_date - today).days
                 if days_left < 0:
-                    print("Task ID", task_id, "is overdue")
+                    #print("Task ID", task_id, "is overdue")
+                    print(e, " THIS TASK IS OVERDUE")
                 elif days_left <= 2:
-                    print("Task ID", task_id, "is close to the due date")
+                    print(e, "THIS TASK IS CLOSE TO DUE DATE")
 
        
