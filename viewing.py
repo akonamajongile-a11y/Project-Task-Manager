@@ -11,8 +11,9 @@ def view_task():
             f"{'Priority':<10}"
             f"{'Due Date':<15}"
             f"{'Status':<10}")
+        print("=" * len(task_categories))
         print(task_categories)
-        print("-" * len(task_categories))   # Seperator line
+        print("=" * len(task_categories))   # Seperator line
 
         for everything in reader:
             print(
@@ -26,6 +27,6 @@ def view_task():
             
     print("=" * len(task_categories))       
     print(" " * 40 + "Keep going, you're doing great :)") 
-
+    print("=" * len(task_categories))
        
 view_task()
