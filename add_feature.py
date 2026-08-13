@@ -30,7 +30,7 @@ def add_tasks():
                
     valid_description = False
     while not valid_description: 
-        description = input("Please enter the description of the task: ").capitalize().strip()
+        description = """input("Please enter the description of the task: ").capitalize().strip()"""
         if description == "" :
                valid_description = False
                print("This is a required field.")
