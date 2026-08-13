@@ -53,6 +53,7 @@ def task():
 
     else:
         print("Please insert a correct option!")
+        task()
 
 
 task()
